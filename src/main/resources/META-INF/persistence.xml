@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="lexislacion" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!--                <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+
+            <!-- H2 -->
+            <!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:E:\98 - Bases de datos\h2\lexislacion;DATABASE_TO_UPPER=FALSE;FILE_LOCK=NO;DB_CLOSE_DELAY=-1"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.user" value=""/>-->
+            <!--            <property name="jakarta.persistence.jdbc.password" value=""/>-->
+            <!--            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+
+            <!-- mariaDB LOCAL -->
+            <!--                        <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/lexislacion"/>-->
+            <!--                        <property name="jakarta.persistence.jdbc.user" value="root"/>-->
+            <!--                        <property name="jakarta.persistence.jdbc.password" value=""/>-->
+            <!--                        <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>-->
+
+            <!-- mariaDB REMOTO -->
+            <!--            <property name="jakarta.persistence.jdbc.url"-->
+            <!--                      value="jdbc:mariadb://dbalumnos.sanclemente.local:3312/Lexislacion"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.user" value="lexislacionuser"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.password" value="ABC123.."/>-->
+            <!--            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>-->
+
+            <!-- PostgreSQL -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/lexislacion"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+
+            <!-- SQLite -->
+            <!--            <property name="jakarta.persistence.jdbc.url"-->
+            <!--                      value="jdbc:sqlite:E:\98 - Bases de datos\peliculas\lexislacion.db"/>-->
+            <!--            <property name="jakarta.persistence.jdbc.user" value=""/>-->
+            <!--            <property name="jakarta.persistence.jdbc.password" value=""/>-->
+            <!--            <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>-->
+
+            <!-- Para access o HSQLDB -->
+            <!--<property name="jakarta.persistence.jdbc.url" value="jdbc:ucanaccess://E:\98 - Bases de datos\access\lexislacion.mdb"/>-->
+            <!--      <property name="jakarta.persistence.jdbc.user" value="root"/>-->
+            <!--      <property name="jakarta.persistence.jdbc.password" value=""/>-->
+            <!--      <property name="jakarta.persistence.jdbc.driver" value="net.ucanaccess.jdbc.UcanaccessDriver"/>-->
+
+
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+
+            <!--            <property name="eclipselink.logging.level" value="INFO"/>-->
+            <!--            <property name="eclipselink.logging.level.sql" value="FINE"/>-->
+            <!--            <property name="eclipselink.logging.parameters" value="true"/>-->
+
+            <!-- Muestra por pantalla las sentencias SQL -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.highlight_sql" value="true"/>
+            <property name="hibernate.globally_quoted_identifiers" value="true"/>
+            <!--      <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />-->
+        </properties>
+    </persistence-unit>
+</persistence>
